@@ -32,10 +32,10 @@
     <section class="hero" id="home">
 
         <div class="hero-text">
-            <h1>
-                Innovating
-                Microbiology Testing
-            </h1>
+            <h1 class="typing-text"></h1>
+
+            <img src="images/gambar 1.jpg" class="hero-image">
+
 
             <p>
                 Digital microbiology platform with real-time tracking and laboratory services.
@@ -68,19 +68,29 @@
 
         <div class="card-container">
 
-            <div class="card">
+            <div class="card" onclick="openModal()">
                 <h3>Digital Reports</h3>
                 <p>Receive accurate microbiology reports online</p>
             </div>
-
+        <a href="https://forms.gle/U4g5hhwhACNEh8SC7" target="_blank" class="card-link">
+        
             <div class="card">
                 <h3>Sample Pick-Up</h3>
                 <p>Convenient sample collection service</p>
             </div>
 
+
+        </a>
+            
+            <div class="card" onclick="openOrderModal()">
+                <h3>Place an Order!</h3>
+                <p>
+                    Submit your sample here!
+                </p>
+            </div>
         </div>
 
-    </section>\
+    </section>
 
 
     <!--Team-->
@@ -91,16 +101,38 @@
         <div class="team-container">
 
             <div class="team-card">
+
+                <img src="images/naura.jpg" class="team-photo">
+
+            <a href="https://www.linkedin.com/in/naurah215?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="member-link">
+               <h4 class="member-name">Naurah</h4>
+
+            </a>
+
+
                 <h3>Research Team</h3>
                 <p>Microbiology Specialists</p>
             </div>
 
             <div class="team-card">
+                <img src="images/lala.jpg" class="team-photo">
+            
+            <a href="https://www.linkedin.com/in/naila-ayu-ramadhanti-wibowo-419180322?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="member-link">
+               <h4 class="member-name">Naila Ayu Ramadhanti Wibowo</h4>
+            </a>
+
                 <h3>Lab Analysts</h3>
                 <p>Testing & Validation</p>
             </div>
 
             <div class="team-card">
+                <img src="images/rachel (2).jpg" class="team-photo">
+            
+            <a href="https://www.linkedin.com/in/christiane-aurelia/" target="_blank" class="member-link">
+               <h4 class="member-name">Christiane Aurelia Rachel</h4>
+            </a>
+
+
                 <h3>Developers</h3>
                 <p>Digital Platform Team</p>
             </div>
@@ -120,8 +152,38 @@
 
     </section>
 
+<!--Modal-->
+<div id="reportModal" class="modal">
+    
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
 
-    <script src="sricpt.js"></script>
+        <h2>Digital Report Preview </h2>
+        
+        <img src="images/gambar 2.jpg" class="report-image">
+
+    </div>
+</div>
+
+<!--Order Modal-->
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeOrderModal()">&times;</span>
+        <h2>Place an Order</h2>
+        <form class="order-form">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="text" placeholder="Type of Sample" required>
+            <input type="text" placeholder="Kind of Analyze" required>
+            <textarea placeholder="Additional Notes"></textarea>
+            
+            <button type="submit">
+                Submit Order
+            </button>
+        </form>
+    </div>
+</div>
+    <script src="script.js"></script>
 
 </body>
 </html>
