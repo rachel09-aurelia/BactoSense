@@ -273,3 +273,165 @@ section h2 {
     min-height: 120px;
     resize: none;
 }
+.tracking{
+    text-align:center;
+}
+.tracking-box{
+    margin-top:40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.tracking input{
+    width:300px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    outline:none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+.tracking input::placeholder {
+    color: rgba(0,0,0,0.5);
+}
+#trackingResult{
+    margin-top:40px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Tracking Result Styling */
+.tracking-result-container {
+    background: linear-gradient(135deg, rgba(0,229,255,0.1), rgba(0,100,150,0.1));
+    border: 2px solid rgba(0,229,255,0.3);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: left;
+}
+
+.tracking-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid rgba(0,229,255,0.3);
+    padding-bottom: 20px;
+}
+
+.tracking-header h3 {
+    font-size: 1.8rem;
+    color: #00e5ff;
+    margin-bottom: 5px;
+}
+
+.tracking-id {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+}
+
+/* Progress Bar */
+.progress-bar-container {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #00e5ff, #00a8cc);
+    transition: width 0.5s ease;
+    border-radius: 10px;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #00e5ff;
+    font-weight: 600;
+}
+
+/* Timeline */
+.timeline {
+    margin-top: 30px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0,229,255,0.2);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -33px;
+    width: 24px;
+    height: 24px;
+    background: rgba(0,229,255,0.2);
+    border: 2px solid rgba(0,229,255,0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.timeline-item.completed .timeline-marker {
+    background: #00e5ff;
+    border-color: #00e5ff;
+    color: #07131f;
+}
+
+.timeline-item.current .timeline-marker {
+    background: #ffa500;
+    border-color: #ffa500;
+    color: white;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.timeline-content {
+    flex-grow: 1;
+}
+
+.timeline-content h4 {
+    margin: 0 0 5px 0;
+    color: #00e5ff;
+    font-size: 1rem;
+}
+
+.timeline-item.current .timeline-content h4 {
+    color: #ffa500;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+}
