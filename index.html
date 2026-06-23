@@ -178,6 +178,8 @@
     </section>
 
 <!--Modal-->
+        <!-- Hidden iframe used to submit the order form to Apps Script without CORS issues -->
+        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
 <div id="reportModal" class="modal">
     
     <div class="modal-content">
@@ -195,12 +197,12 @@
     <div class="modal-content">
         <span class="close" onclick="closeOrderModal()">&times;</span>
         <h2>Place an Order</h2>
-        <form class="order-form">
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <input type="text" placeholder="Type of Sample" required>
-            <input type="text" placeholder="Kind of Analyze" required>
-            <textarea placeholder="Additional Notes"></textarea>
+        <form id="orderForm" class="order-form">
+            <input type="text" name="fullName" id="orderFullName" placeholder="Full Name" required>
+            <input type="email" name="email" id="orderEmail" placeholder="Email Address" required>
+            <input type="text" name="sampleType" id="orderSampleType" placeholder="Type of Sample" required>
+            <input type="text" name="analyzeKind" id="orderAnalyzeKind" placeholder="Kind of Analyze" required>
+            <textarea name="notes" id="orderNotes" placeholder="Additional Notes"></textarea>
             
             <button type="submit">
                 Submit Order
