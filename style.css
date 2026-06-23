@@ -191,6 +191,25 @@ section h2 {
     text-align: center;
  }
 
+ .social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+ }
+
+ .social-icon {
+    width: 42px;
+    height: 42px;
+    color: #e1306c;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+ }
+
+ .social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.85;
+ }
+
  @media (max-width: 768px) {
 
     header {
